@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "brn-site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [".claude/devserver.py", "5510"],
+      "port": 5510
+    },
+    {
+      "name": "brn-site-alt",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [".claude/devserver.py", "5511"],
+      "port": 5511
+    }
+  ]
+}

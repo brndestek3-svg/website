@@ -1,0 +1,14 @@
+# Isletim sistemi
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Gecici
+*.log
+*.tmp
+_ornek.html

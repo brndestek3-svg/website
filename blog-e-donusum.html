@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>e-Dönüşümü SAP'nin İçinde Tutmak | BRN Yazılım</title>
+<meta name="description" content="e-Fatura, e-Arşiv ve e-Defter süreçlerini SAP içinde mi yan sistemde mi yürütmeli? Mimari kararın mutabakat, kapanış ve denetim üzerindeki etkileri.">
+<meta name="theme-color" content="#091847">
+<link rel="canonical" href="https://www.brnyazilim.com/blog-e-donusum.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BRN Yazılım">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://www.brnyazilim.com/blog-e-donusum.html">
+<meta property="og:title" content="e-Dönüşümü SAP'nin İçinde Tutmak | BRN Yazılım">
+<meta property="og:description" content="e-Fatura, e-Arşiv ve e-Defter süreçlerini SAP içinde mi yan sistemde mi yürütmeli? Mimari kararın mutabakat, kapanış ve denetim üzerindeki etkileri.">
+<meta property="og:image" content="https://www.brnyazilim.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260924e">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">İçeriğe geç</a>
+<div data-layout="header"></div>
+
+<main id="main">
+
+<section class="page-hero page-hero-sm page-hero-center">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-grid"></div><div class="orb orb-3"></div></div>
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+      <span aria-hidden="true">/</span>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <span aria-hidden="true">/</span>
+      <span class="here" data-i18n="blog.tag6">e-Dönüşüm</span>
+    </nav>
+    <div class="article-meta"><span class="tag" data-i18n="blog.tag6">e-Dönüşüm</span><span class="legal-date">7 <span data-i18n="bl.readTime">okuma süresi</span></span></div>
+    <h1>e-Dönüşümü SAP'nin İçinde Tutmak: Kolay Görünen Kararın Ay Sonundaki Bedeli</h1>
+    <p class="lead">e-Belge süreci bir "gönderme" işi değil, bir muhasebe sürecidir. Yan sistemde kurulan çözümler kısa vadede hızlı görünür; faturayı ay sonunda mutabakat masasında keser.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    <article class="article prose reveal">
+      <figure class="article-cover">
+        <img src="assets/blog-6.jpg" width="1200" height="675" alt="Kâğıt faturayı ekrandaki elektronik fatura kaydıyla karşılaştıran muhasebe uzmanı">
+      </figure>
+
+      <p class="lang-note en-only" data-i18n="bl.langNote">Bu yazı Türkçe yayımlanmıştır.</p>
+
+  <h4><strong>Giriş: "Zaten Gönderiyoruz, Sorun Ne?"</strong></h4>
+  <p>e-Dönüşüm projeleri çoğu şirkette teknik bir teslim işi gibi ele alınıyor: belge üretilsin, karşı tarafa ulaşsın, iş bitsin. Gerçekten de çözümün ilk haftası genellikle sorunsuz geçer. Sorunlar birkaç ay sonra, hep aynı yerden çıkar: <strong>ay sonu mutabakat masasından.</strong></p>
+  <p>"Bu ay 4.812 fatura kesmişiz ama muhasebede 4.799 kayıt var, 13 fatura nerede?" Bu soruyu bir kez soran herkes, e-belge sürecinin aslında bir gönderim değil bir <em>muhasebeleştirme</em> süreci olduğunu anlar.</p>
+  <hr>
+
+  <h4><strong>İki Mimari, İki Farklı Sonuç</strong></h4>
+  <p>Uygulamada karşımıza iki temel kurgu çıkıyor.</p>
+
+  <h4><strong>1. Yan Sistem Yaklaşımı</strong></h4>
+  <p>Faturalar SAP'de üretilir, bir arayüzle entegratöre ya da ayrı bir portala aktarılır. Kullanıcı belgenin durumunu SAP'de değil, o portalın ekranından takip eder.</p>
+  <p>Bu yaklaşım hızlı devreye alınır ve ilk bakışta ucuzdur. Ancak iki sistem arasında bir <strong>doğruluk boşluğu</strong> yaratır: SAP "gönderdim" der, portal "reddedildi" der ve ikisi birbirini otomatik olarak düzeltmez. Aradaki fark, her ay birinin elle bulması gereken bir işe dönüşür.</p>
+
+  <h4><strong>2. SAP İçinde Entegre Yaklaşım</strong></h4>
+  <p>Belge SAP'de üretilir, durum bilgisi (gönderildi, kabul, ret, iptal talebi) muhasebe belgesinin üzerinde izlenir. Kullanıcı ikinci bir ekrana geçmez; muhasebeci faturayı hangi ekranda kestiyse durumunu da orada görür.</p>
+  <p>Kurulumu daha fazla tasarım ister. Buna karşılık ay sonunda "kaç belge ürettik, kaçı karşı tarafa ulaştı, kaçı muhasebeleşti" sorusunun cevabı tek bir rapordan çıkar.</p>
+  <hr>
+
+  <h4><strong>Yan Sistemin Görünmeyen Dört Maliyeti</strong></h4>
+  <ol>
+    <li><strong>Mutabakat işçiliği.</strong> İki sistemin sayıları her ay karşılaştırılır. Bu, kimsenin bütçesine yazmadığı ama her ay tekrarlayan bir maliyettir. Fark küçükse bile bulunması saatler alır.</li>
+    <li><strong>İptal ve itiraz senaryoları.</strong> Kesilen bir belgenin iptali, karşı tarafın reddi ya da iade faturası; bunların her biri muhasebede bir karşılık gerektirir. Durum bilgisi SAP'ye geri akmıyorsa, muhasebe kaydı gerçeğin gerisinde kalır.</li>
+    <li><strong>Numaralandırma karmaşası.</strong> Belge numarası iki yerde üretiliyorsa, seri tutarlılığını korumak elle yapılan bir işe dönüşür. Denetimde en sık sorulan konulardan biri tam da budur.</li>
+    <li><strong>Arşiv ve erişim.</strong> Yasal saklama yükümlülüğü şirkete aittir; hizmet aldığınız tarafa değil. Belgeye yıllar sonra kimin, hangi sistemden ulaşacağı baştan netleşmezse, sorun ortaya çıktığında çözmek çok daha pahalıdır.</li>
+  </ol>
+  <hr>
+
+  <h4><strong>SAP Tarafında Gözden Kaçan Beş Nokta</strong></h4>
+  <p>Entegre kurguyu seçseniz bile tasarımda şu beş başlık netleşmeden projeye başlamayın:</p>
+  <ul>
+    <li><strong>Muhasebeleştirme anı.</strong> Belge üretildiğinde mi, karşı tarafça kabul edildiğinde mi muhasebeleşecek? İkisi farklı dönemlere düşebilir ve dönem sonunda fark yaratır. Bu karar mali müşavirle birlikte verilmelidir.</li>
+    <li><strong>Durum alanlarının raporlanabilirliği.</strong> Belge durumu yalnızca ekranda görünen bir bilgi değil, üzerinde rapor çekilebilen bir alan olmalıdır. "Gönderilmiş ama kabul edilmemiş belgeler" listesi tek tuşla alınabilmelidir.</li>
+    <li><strong>İade ve iptal akışı.</strong> Satış iadesi, fiyat farkı ve iptal senaryolarının her biri için hangi belge türünün üretileceği baştan tanımlanmalıdır. Bu tanım eksikse kullanıcılar kendi pratik çözümlerini üretir ve muhasebe tutarlılığı bozulur.</li>
+    <li><strong>Alış tarafı.</strong> Projelerin büyük kısmı satış tarafına odaklanır; oysa gelen faturaların otomatik okunup satınalma siparişiyle eşleştirilmesi, çoğu şirkette daha büyük bir tasarruf alanıdır.</li>
+    <li><strong>e-Defter ile tutarlılık.</strong> Defter tarafı, muhasebe kayıtlarının doğrudan yansımasıdır. Yevmiye ve kebir arasındaki en küçük tutarsızlık dönem kapanışında sorun çıkarır; bu nedenle kapanış öncesi kontrolleri takvime yazılı adım olarak eklemek gerekir.</li>
+  </ul>
+  <hr>
+
+  <h4><strong>Devreye Almadan Önce Sorulacak Altı Soru</strong></h4>
+  <ol>
+    <li>Ay sonunda üretilen belge sayısı ile muhasebeleşen kayıt sayısını tek raporda karşılaştırabiliyor muyuz?</li>
+    <li>Reddedilen veya iptal edilen bir belgenin muhasebe karşılığı otomatik oluşuyor mu, elle mi giriliyor?</li>
+    <li>Belge numarası tek bir yerde mi üretiliyor?</li>
+    <li>Gelen faturalar sipariş ve mal kabul kayıtlarıyla otomatik eşleşiyor mu?</li>
+    <li>Beş yıl sonra bir belgeye hangi sistemden, kimin yetkisiyle ulaşacağız?</li>
+    <li>Kapanış öncesi defter tutarlılık kontrolü, kapanış takviminde yazılı bir adım mı?</li>
+  </ol>
+  <p>Bu altı sorunun hepsine rahatça "evet" diyebiliyorsanız kurgunuz sağlamdır. Birine bile tereddütle cevap veriyorsanız, o tereddüt er ya da geç bir ay sonunda karşınıza çıkar.</p>
+  <hr>
+
+  <h4><strong>Sonuç</strong></h4>
+  <p>e-Dönüşüm, mevzuata uyum başlığı altında ele alındığında bir yük gibi görünür. Doğru kurgulandığında ise tam tersi olur: fatura kesme, mutabakat ve arşivleme süreçlerinin tek sistemde toplanması, ay sonu kapanışını kısaltan en somut adımlardan biridir.</p>
+  <p>Belirleyici olan hangi entegratörle çalıştığınız değil, <strong>belgenin muhasebe kaydıyla aynı yerde yaşayıp yaşamadığıdır.</strong></p>
+  <p>Not: e-belge kapsamı, zorunluluk sınırları ve süreler zaman içinde değişmektedir. Bu yazı süreç ve mimari tarafını ele alır; kapsam ve yükümlülük değerlendirmesi için mali müşavirinizle birlikte karar vermenizi öneririz.</p>
+  <p><strong>Mevcut kurgunuzu birlikte gözden geçirelim.</strong> Hangi adımların SAP dışında kaldığını çıkarıp, mutabakat yükünü nerede azaltabileceğinizi somut olarak konuşabiliriz. Kapsamı <a href="cozumler.html#efatura">e-Fatura Otomasyonu çözümümüz</a> sayfasında bulabilirsiniz.</p>
+
+      <nav class="article-nav">
+        <a class="btn btn-outline" href="blog.html">← <span data-i18n="bl.back">Tüm yazılar</span></a>
+        <a class="btn btn-primary" href="iletisim.html" data-i18n="cta.btn">Ön görüşme planlayın</a>
+      </nav>
+    </article>
+
+    <div class="more-posts">
+      <h2 data-i18n="bl.more">Diğer yazılar</h2>
+      <div class="post-grid">
+        <article class="post reveal">
+          <a href="blog-gecis-stratejisi.html">
+            <div class="post-img" style="background-image:url('assets/blog-5.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag5">Geçiş Stratejisi</span></div>
+              <h3 data-i18n="blog.p5">Brownfield mi, Greenfield mi? S/4HANA Geçiş Kararını Finans Ekibi Verir</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+        <article class="post reveal" data-delay="90">
+          <a href="blog-mali-kapanis.html">
+            <div class="post-img" style="background-image:url('assets/blog-1.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag1">S/4HANA</span></div>
+              <h3 data-i18n="blog.p1">Ay Sonu Kapanış Kâbusu Sona Erdi: S/4HANA'da Mali Kapanışı Hızlandırmanın 3 Yolu</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+        <article class="post reveal" data-delay="180">
+          <a href="blog-sap-fi.html">
+            <div class="post-img" style="background-image:url('assets/blog-3.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag3">SAP FI</span></div>
+              <h3 data-i18n="blog.p3">SAP FI Hizmetlerimiz: S/4HANA'ya Hazır, Uçtan Uca Finans Dönüşümü</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div data-layout="footer"></div>
+
+<script src="js/layout.js?v=20260924e"></script>
+<script src="js/i18n.js?v=20260924e"></script>
+<script src="js/main.js?v=20260924e"></script>
+</body>
+</html>

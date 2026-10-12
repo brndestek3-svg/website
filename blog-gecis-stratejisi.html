@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<script>document.documentElement.classList.add("js")</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brownfield mi Greenfield mi? S/4HANA Geçiş Kararı | BRN Yazılım</title>
+<meta name="description" content="S/4HANA geçişinde Brownfield, Greenfield ve seçici veri taşıma yaklaşımlarının finans ekibi açısından farkları; kararı belirleyen kriterler ve geçiş öncesi kontrol listesi.">
+<meta name="theme-color" content="#091847">
+<link rel="canonical" href="https://www.brnyazilim.com/blog-gecis-stratejisi.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BRN Yazılım">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://www.brnyazilim.com/blog-gecis-stratejisi.html">
+<meta property="og:title" content="Brownfield mi Greenfield mi? S/4HANA Geçiş Kararı | BRN Yazılım">
+<meta property="og:description" content="S/4HANA geçişinde Brownfield, Greenfield ve seçici veri taşıma yaklaşımlarının finans ekibi açısından farkları; kararı belirleyen kriterler ve geçiş öncesi kontrol listesi.">
+<meta property="og:image" content="https://www.brnyazilim.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260924e">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">İçeriğe geç</a>
+<div data-layout="header"></div>
+
+<main id="main">
+
+<section class="page-hero page-hero-sm page-hero-center">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-grid"></div><div class="orb orb-3"></div></div>
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+      <span aria-hidden="true">/</span>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <span aria-hidden="true">/</span>
+      <span class="here" data-i18n="blog.tag5">Geçiş Stratejisi</span>
+    </nav>
+    <div class="article-meta"><span class="tag" data-i18n="blog.tag5">Geçiş Stratejisi</span><span class="legal-date">9 <span data-i18n="bl.readTime">okuma süresi</span></span></div>
+    <h1>Brownfield mi, Greenfield mi? S/4HANA Geçiş Kararını Finans Ekibi Verir</h1>
+    <p class="lead">Geçiş yaklaşımı bir altyapı tercihi gibi görünür; oysa faturayı da faydayı da finans ekibi yazar. Üç yolun farkını ve kararı belirleyen kriterleri anlatıyoruz.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container">
+    <article class="article prose reveal">
+      <figure class="article-cover">
+        <img src="assets/blog-5.jpg" width="1200" height="675" alt="S/4HANA geçiş stratejisini tahtada planlayan proje ekibi">
+      </figure>
+
+      <p class="lang-note en-only" data-i18n="bl.langNote">Bu yazı Türkçe yayımlanmıştır.</p>
+
+  <h4><strong>Giriş: Yanlış Soruyu Soruyoruz</strong></h4>
+  <p>S/4HANA gündeme geldiğinde toplantı odasındaki ilk soru neredeyse her zaman aynı oluyor: <em>"Mevcut sistemi mi dönüştürelim, yoksa sıfırdan mı kuralım?"</em> Soru teknik bir soru gibi duruyor, bu yüzden de cevabı çoğunlukla BT tarafından bekleniyor.</p>
+  <p>Oysa bu kararın sonuçlarını en çok finans ekibi yaşıyor. Hesap planınız olduğu gibi mi kalacak, yoksa yeniden mi tasarlanacak? Geçmiş yılların muhasebe kayıtlarına aynı sistemden erişebilecek misiniz? Açılış bakiyeleriyle mi başlayacaksınız, on yıllık hareket geçmişiyle mi? Denetçiniz karşılaştırmalı dönemleri nereden görecek?</p>
+  <p>Bunların hiçbiri altyapı sorusu değil. Bu yüzden doğru soru şu: <strong>Finans organizasyonunuz neyi korumak, neyi bırakmak istiyor?</strong></p>
+  <hr>
+
+  <h4><strong>Üç Yol, Üç Farklı Maliyet Yapısı</strong></h4>
+  <p>Pratikte üç yaklaşım var. Aralarındaki fark sadece teknik yöntem değil; risk, süre ve finans ekibinin iş yükü de değişiyor.</p>
+
+  <h4><strong>1. Brownfield — Sistem Dönüşümü</strong></h4>
+  <p>Mevcut SAP ERP sisteminiz, yapılandırması ve verisiyle birlikte yerinde S/4HANA'ya dönüştürülür. Hesap planı, şirket kodları, masraf yeri hiyerarşisi ve geçmiş hareketler korunur.</p>
+  <ul>
+    <li><strong>Güçlü yanı:</strong> Süreçlerinizde kesinti en aza iner, kullanıcı eğitimi görece hafiftir, geçmiş veri aynı sistemde kalır. Denetim ve karşılaştırmalı raporlama tarafında ek çaba gerekmez.</li>
+    <li><strong>Zayıf yanı:</strong> Yıllar içinde biriken teknik borcu — kullanılmayan hesapları, terk edilmiş özel geliştirmeleri, kimsenin hatırlamadığı uyarlamaları — beraberinde taşır. Dönüşüm bittiğinde daha hızlı ama aynı karmaşıklıkta bir sisteminiz olur.</li>
+  </ul>
+
+  <h4><strong>2. Greenfield — Yeni Kurulum</strong></h4>
+  <p>Boş bir S/4HANA sistemi kurulur, süreçler yeniden tasarlanır, ana veriler ve açılış bakiyeleri taşınır.</p>
+  <ul>
+    <li><strong>Güçlü yanı:</strong> Hesap planını sadeleştirmek, masraf yeri ve kâr merkezi yapısını bugünkü organizasyona göre yeniden kurmak, gereksiz özel geliştirmelerden kurtulmak için tek gerçek fırsattır. Standart süreçlere dönmek, sonraki yıllarda bakım maliyetini belirgin biçimde düşürür.</li>
+    <li><strong>Zayıf yanı:</strong> Proje süresi ve finans ekibinin ayırması gereken zaman en yüksek buradadır. Geçmiş veriye erişim ayrı bir çözüm gerektirir; çoğu şirket eski sistemi bir süre salt-okunur tutar veya veriyi arşiv çözümüne taşır.</li>
+  </ul>
+
+  <h4><strong>3. Seçici Veri Taşıma — Karma Yaklaşım</strong></h4>
+  <p>İki uç arasındaki orta yol. Bazı şirket kodları dönüştürülür, bazıları yeniden kurulur; ya da tüm yapılandırma taşınırken hareket verisinin yalnızca belirli bir dönemi aktarılır.</p>
+  <ul>
+    <li><strong>Güçlü yanı:</strong> Grup şirketlerinin olgunluk düzeyi farklıysa gerçekçi tek seçenek budur. "Üç yıllık hareket yeter" gibi kararlarla veri hacmini ve dolayısıyla test yükünü küçültür.</li>
+    <li><strong>Zayıf yanı:</strong> En çok planlama isteyen yaklaşımdır. Hangi verinin taşınacağı kararı mali müşavir ve denetçiyle birlikte verilmezse, geçişten sonra raporlamada boşluk çıkar.</li>
+  </ul>
+  <hr>
+
+  <h4><strong>Kararı Belirleyen Altı Kriter</strong></h4>
+  <p>Karar matrisini şirketten şirkete değiştiren şey teknoloji değil, aşağıdaki altı başlıktaki cevaplarınız:</p>
+  <ol>
+    <li><strong>Hesap planınızdan memnun musunuz?</strong> Yıllar içinde ihtiyaç oldukça açılmış, benzer işlevde yüzlerce hesap biriktiyse Greenfield'in sunduğu sadeleşme fırsatı ciddi bir kazanç demektir. Plan hâlâ düzenli ve anlaşılırsa Brownfield'i tercih etmek için güçlü bir nedeniniz var.</li>
+    <li><strong>Özel geliştirmelerinizin ne kadarı hâlâ kullanılıyor?</strong> Kullanım analizi çoğu şirkette şaşırtıcı sonuç verir: geliştirmelerin önemli bir kısmı yıllardır çalıştırılmamaktadır. Ölü kodu taşımanın maliyeti, onu yeniden yazmanın maliyetinden yüksek olabilir.</li>
+    <li><strong>Geçmiş veriye hangi derinlikte ihtiyacınız var?</strong> Vergi mevzuatı, denetim ve kendi iç raporlama alışkanlıklarınız birlikte değerlendirilmelidir. "Her ihtimale karşı hepsini taşıyalım" kararı, test kapsamını ve proje süresini sessizce büyüten en yaygın sebeplerden biridir.</li>
+    <li><strong>Organizasyon yapınız değişti mi?</strong> Bölünme, birleşme ya da yeni bir yurt dışı iştirak varsa mevcut şirket kodu ve kâr merkezi kurgusu bugünü anlatmıyor olabilir. Bu durumda dönüşüm, yapıyı da beraberinde taşır.</li>
+    <li><strong>Ekibinizin projeye ayırabileceği zaman ne kadar?</strong> Greenfield, finans ekibinden tasarım atölyelerine ve teste ciddi katılım bekler. Aynı ekip ay sonu kapanışını da yapıyorsa takvimi buna göre kurmak gerekir.</li>
+    <li><strong>Takviminiz ne?</strong> SAP'nin duyurduğu standart bakım takvimi, geçiş planlarını belirleyen gerçek bir kısıttır. Zaman daraldıkça Brownfield'in öngörülebilirliği ağır basar; erken başlayan şirketler ise Greenfield'in sunduğu yeniden tasarım fırsatını değerlendirebilir.</li>
+  </ol>
+  <hr>
+
+  <h4><strong>Hangi Yolu Seçerseniz Seçin: Üç Zorunlu Hazırlık</strong></h4>
+  <p>Bazı konular yaklaşımdan bağımsız olarak karşınıza çıkar. Bunları projeye başlamadan önce ele almak, geçiş sırasında sürpriz yaşamanın önüne geçer:</p>
+  <ul>
+    <li><strong>İş Ortağı (Business Partner) dönüşümü.</strong> S/4HANA'da müşteri ve satıcı ana verileri İş Ortağı nesnesi üzerinden yönetilir. Mevcut sistemdeki mükerrer kayıtlar, eksik vergi bilgileri ve tutarsız adres verileri bu aşamada yüzeye çıkar. Ana veri temizliğine erken başlayan şirketler haftalar kazanır.</li>
+    <li><strong>Yeni Duran Varlık Muhasebesi.</strong> S/4HANA'da duran varlık muhasebesi yeni mimariyle çalışır; değerleme alanları ve amortisman defterlerinin gözden geçirilmesi gerekir. Enflasyon muhasebesi uygulayan şirketler için bu adım ayrıca kritik.</li>
+    <li><strong>Malzeme Defteri (Material Ledger).</strong> Üretim yapan şirketlerde stok değerleme mantığı değişir. Maliyet muhasebesi ekibinin geçiş öncesinde beklenen sonucu netleştirmesi, canlı geçiş sonrasında "rakamlar neden farklı?" sorusunu ortadan kaldırır.</li>
+  </ul>
+  <hr>
+
+  <h4><strong>Pratik Bir Öneri: Karardan Önce Fotoğrafı Çekin</strong></h4>
+  <p>Yaklaşımı seçmeden önce mevcut sistemin durumunu ölçmek, tartışmayı fikirden veriye taşır. Şu dört tabloyu çıkarmak genellikle bir haftadan kısa sürer ve kararı büyük ölçüde kendiliğinden verdirir:</p>
+  <ol>
+    <li>Son üç yılda hiç hareket görmemiş muhasebe hesaplarının listesi</li>
+    <li>Son bir yılda hiç çalıştırılmamış özel programların listesi</li>
+    <li>Şirket kodu ve yıl bazında hareket satırı sayıları</li>
+    <li>Mükerrer veya eksik ana veri kayıtlarının sayısı</li>
+  </ol>
+  <p>Bu dört liste elinize geçtiğinde "sadeleşmeye ihtiyacımız var mı?" sorusu artık bir görüş meselesi olmaktan çıkar.</p>
+  <hr>
+
+  <h4><strong>Sonuç</strong></h4>
+  <p>Brownfield ve Greenfield arasında evrensel bir doğru yok; şirketinizin bugünkü durumuna göre doğru olan bir seçim var. Düzenli bir hesap planı, sınırlı sayıda özel geliştirme ve dar bir takvim varsa sistem dönüşümü genellikle en akılcı yoldur. Yıllar içinde karmaşıklaşmış bir kurgu, değişmiş bir organizasyon ve yeniden tasarım için ayrılabilecek zaman varsa yeni kurulum uzun vadede daha düşük maliyetli olur.</p>
+  <p>Kritik olan, kararın finans ekibinin ihtiyaçları konuşulmadan verilmemesidir. Geçiş bittiğinde raporu çeken, denetçiyle konuşan ve ay sonunu kapatan taraf onlar olacak.</p>
+  <p><strong>Hangi yolun size uygun olduğunu birlikte değerlendirelim.</strong> Mevcut sisteminizin fotoğrafını çıkarıp üç yaklaşımın sizin için ne anlama geldiğini somut olarak konuşabiliriz. Kapsamı <a href="cozumler.html#gecis">SAP Geçiş Projeleri çözümümüz</a> sayfasında bulabilirsiniz.</p>
+
+      <nav class="article-nav">
+        <a class="btn btn-outline" href="blog.html">← <span data-i18n="bl.back">Tüm yazılar</span></a>
+        <a class="btn btn-primary" href="iletisim.html" data-i18n="cta.btn">Ön görüşme planlayın</a>
+      </nav>
+    </article>
+
+    <div class="more-posts">
+      <h2 data-i18n="bl.more">Diğer yazılar</h2>
+      <div class="post-grid">
+        <article class="post reveal">
+          <a href="blog-mali-kapanis.html">
+            <div class="post-img" style="background-image:url('assets/blog-1.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag1">S/4HANA</span></div>
+              <h3 data-i18n="blog.p1">Ay Sonu Kapanış Kâbusu Sona Erdi: S/4HANA'da Mali Kapanışı Hızlandırmanın 3 Yolu</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+        <article class="post reveal" data-delay="90">
+          <a href="blog-nakit-akisi.html">
+            <div class="post-img" style="background-image:url('assets/blog-2.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag2">Nakit Yönetimi</span></div>
+              <h3 data-i18n="blog.p2">Nakit Akışı Raporu: Operasyonel Şeffaflık ve S/4HANA Geçişinde Zahmetsiz Yol</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+        <article class="post reveal" data-delay="180">
+          <a href="blog-sap-fi.html">
+            <div class="post-img" style="background-image:url('assets/blog-3.jpg')"></div>
+            <div class="post-body">
+              <div class="post-meta"><span class="tag" data-i18n="blog.tag3">SAP FI</span></div>
+              <h3 data-i18n="blog.p3">SAP FI Hizmetlerimiz: S/4HANA'ya Hazır, Uçtan Uca Finans Dönüşümü</h3>
+              <span class="post-more" data-i18n="common.read">Devamını oku →</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div data-layout="footer"></div>
+
+<script src="js/layout.js?v=20260924e"></script>
+<script src="js/i18n.js?v=20260924e"></script>
+<script src="js/main.js?v=20260924e"></script>
+</body>
+</html>
