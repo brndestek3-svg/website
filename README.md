@@ -1,24 +1,31 @@
 # BRN Yazılım — Yeni Web Sitesi Tasarımı
 
-`www.brnyazilim.com` için hazırlanan yeni web sitesi tasarımı (12 sayfa). Saf HTML/CSS/JS — çerçeve, derleme adımı veya bağımlılık yok.
+`www.brnyazilim.com` için hazırlanan yeni web sitesi tasarımı (15 sayfa). Saf HTML/CSS/JS — çerçeve, derleme adımı veya bağımlılık yok, kurulum gerektirmez.
 
 ## Çalıştırma
 
-`index.html` dosyasını çift tıklamak yeterli. Yerel sunucuyla denemek için:
+`index.html` dosyasını çift tıklamak yeterli. Yerel sunucuyla denemek için
+depodaki geliştirme sunucusunu kullanın:
 
 ```bash
-python -m http.server 5510
+python .claude/devserver.py 5510
 ```
 
 Ardından `http://localhost:5510` adresini açın.
 
+> `python -m http.server` kullanmayın: yanıtlarına `Cache-Control` koymadığı için
+> tarayıcı sayfaları sezgisel olarak önbelleğe alır ve dosyayı değiştirdiğiniz hâlde
+> ekranda eski hâli görürsünüz. `devserver.py` her yanıta `no-store` ekleyerek bunu
+> engeller; yalnızca geliştirme içindir.
+
 ## Dosya yapısı
 
 ```
-index.html        Ana sayfa (hero, hizmetler, neden biz, çözüm sekmeleri, süreç, blog, iletişim)
+index.html        Ana sayfa (hero, hizmetler, neden biz, rakamlar bandı, çözüm kartları, süreç, blog, iletişim)
 hakkimizda.html   Kurumsal: hikaye, misyon/vizyon/değerler, neden BRN, süreç
 hizmetler.html    Üç hizmetin detayı + destek hizmetleri kartları
-cozumler.html     Beş çözüm ailesinin detayı (#fi, #cash, #fleet, #data, #fiori)
+cozumler.html     Dokuz çözüm ailesinin detayı (#fi, #cash, #fleet, #data, #fiori,
+                  #efatura, #enflasyon, #gecis, #entegrasyon)
 blog.html         Yazı listesi
 blog-*.html       Dört yazının detay sayfası (mali-kapanis, nakit-akisi, sap-fi, yapay-zeka)
 iletisim.html     İletişim kartları, demo formu, harita
@@ -27,12 +34,12 @@ aydinlatma-metni.html  KVKK aydınlatma metni (10 bölüm, içindekiler menüsü
 cerez-politikasi.html  Çerez politikası ve kullanılan depolama kalemleri tablosu
 css/style.css     Tasarım sistemi: tokenlar, bileşenler, animasyonlar, duyarlı kurallar
 js/layout.js      Ortak üst çubuk, header (mega menü) ve footer — menü tek yerden yönetilir
-js/i18n.js        TR / EN sözlük — tüm metinler burada (433 anahtar, iki dilde eşit)
-js/main.js        Dil, tema, menü, sekmeler, sayaçlar, form doğrulama
+js/i18n.js        TR / EN sözlük — tüm metinler burada (498 anahtar, iki dilde eşit)
+js/main.js        Dil, tema, menü, açılış animasyonları, sayaçlar, form doğrulama
 assets/           favicon, logo, zeminler, fotoğraflar, og-image.jpg (paylaşım görseli)
 web.config        IIS: varsayılan belge, 301 yönlendirme haritası, önbellek ve güvenlik başlıkları
 robots.txt        Arama motoru yönergesi + sitemap adresi
-sitemap.xml       12 sayfanın dizin haritası
+sitemap.xml       14 sayfanın dizin haritası (404 hariç)
 YAYINA-ALMA.md    Mevcut sitenin teknik yapısı ve canlıya alma adımları
 ```
 
@@ -41,7 +48,7 @@ YAYINA-ALMA.md    Mevcut sitenin teknik yapısı ve canlıya alma adımları
 
 - **TR / EN dil değiştirici** — tercih `localStorage`'da saklanır, sayfa yenilenmez
 - **Açık / koyu tema** — sistem tercihini algılar, kullanıcı değiştirebilir
-- **Çözümler sekmeleri** — mevcut sitede içeriği boş olan beş çözüm ailesi burada dolduruldu
+- **Çözüm kartları** — dokuz çözüm ailesi; ana sayfada kart ızgarası, çözümler sayfasında tam metin
 - **Scroll animasyonları, sayaçlar, ilerleme çubuğu** — `IntersectionObserver` ile, `prefers-reduced-motion` desteğiyle
 - **Mega menü** (masaüstü) ve açılır mobil menü
 - **Erişilebilirlik** — klavye odağı, `aria` etiketleri, "içeriğe geç" bağlantısı, kontrast gözetilmiş palet
@@ -69,6 +76,29 @@ Fotoğrafları değiştirmek için `assets/` altına aynı isimle yeni dosya koy
 
 Sol sütundaki sayaç şeridi (`.hero-proof`) `data-count` özniteliğinden okunur; etiketleri `hero.p1`, `hero.p2`, `hero.p4`, `hero.p5` anahtarlarıdır.
 
+
+## Devralan geliştirici için
+
+Depoyu klonlayıp çalıştırmak:
+
+```bash
+git clone https://github.com/brndestek3-svg/website.git
+cd website
+python .claude/devserver.py 5510
+```
+
+Bilinmesi gereken üç şey:
+
+1. **Derleme adımı yok.** Dosyalar olduğu gibi sunulur. Değişiklik yapıp sayfayı
+   yenilemek yeterli.
+2. **Metinler koda gömülü değil.** Tüm içerik `js/i18n.js` içindeki TR/EN
+   sözlüktedir; HTML'deki `data-i18n` öznitelikleri çalışma anında doldurur.
+   Metin değiştirirken iki dili de güncelleyin — sayılar eşit olmalıdır.
+3. **Başlık ve altbilgi tek yerden üretilir.** `js/layout.js` içindeki `NAV` ve
+   `MEGA` dizileri menüyü, aynı dosyanın altındaki şablon da altbilgiyi kurar.
+   Sayfa dosyalarında kopya menü yoktur.
+
+Yayına almadan önce kapatılması gereken maddeler `YAYINA-ALMA.md` dosyasındadır.
 
 ## KVKK / çerez tarafı
 
@@ -122,7 +152,7 @@ Daire yalnızca gerçek nokta olan öğelerde kalır (durum noktaları, madde im
 | `assets/bg-hero.png` | Hero ve tüm iç sayfa başlıklarının zemini (`slider-1-bg-1-light.png`) |
 | `assets/bg-contact.png` | İletişim bölümü zemini (`contact-bg-1.png`) |
 | `assets/bg-footer.png` | Footer, CTA bandı ve süreç bölümü dokusu (`footer-bg-1.png`) |
-| `assets/sol-*.jpg` | Beş çözüm ailesinin fotoğrafı (ana sayfa sekmeleri + çözümler sayfası) |
+| `assets/sol-*.jpg` | Dokuz çözüm ailesinin fotoğrafı (çözümler sayfası) |
 | `assets/hk2-3.jpg` | Kurumsal sayfasındaki ikili görsel — mevcut siteden |
 | `assets/hero-main.jpg`, `hero-a.jpg`, `hero-b.jpg`, `about-1.jpg` | Ana sayfa hero ızgarası ve “Neden BRN” görselleri |
 
@@ -153,5 +183,5 @@ Blog kapakları da yazı konularına göre seçilmiş 1200×675 görsellerle de�
 4. **Blog yazıları.** Dört yazının tam metni mevcut siteden alınıp yerel sayfalara taşındı; artık hiçbir bağlantı eski siteye çıkmıyor. Yeni yazı eklemek için bir `blog-*.html` dosyasını kopyalayıp içeriği değiştirmek ve `blog.html` ile ana sayfaya kart eklemek yeterli. Yazı gövdeleri Türkçedir; İngilizce modda üstte bir bilgi notu çıkar.
 5. **LinkedIn bağlantısı.** Üst çubuktaki LinkedIn adresi yer tutucudur (`js/layout.js` içinde).
 6. **Harita.** İletişim sayfasındaki harita OpenStreetMap gömme çerçevesidir (anahtar gerektirmez). Google Maps tercih ederseniz `iletisim.html` içindeki `iframe` bağlantısını değiştirin; altındaki "Yol tarifi al" bağlantısı zaten Google Maps'e gider.
-7. **SEO.** `canonical`, Open Graph ve Twitter Card etiketleri 12 sayfada da hazır; paylaşım görseli `assets/og-image.jpg` (1200×630). Site tek URL üzerinden iki dilli çalıştığı için `hreflang` kullanılmadı — ayrı `/en/` adresleri açılırsa eklenmelidir.
+7. **SEO.** `canonical`, Open Graph ve Twitter Card etiketleri 14 sayfada da hazır; paylaşım görseli `assets/og-image.jpg` (1200×630). Site tek URL üzerinden iki dilli çalıştığı için `hreflang` kullanılmadı — ayrı `/en/` adresleri açılırsa eklenmelidir.
 8. **Yayına alma.** Mevcut sitenin teknik yapısı, sunucu adımları ve eski adreslerin 301 haritası için `YAYINA-ALMA.md` dosyasına bakın.
